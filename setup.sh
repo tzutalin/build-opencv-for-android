@@ -23,12 +23,12 @@
 
 OPENCV_VERSION=3.1.0
 
-if [ -z "$1" ]
+if [ ! -z "$1" ]
   then
     OPENCV_VERSION="$1"
 fi
 
-echo "${OPENCV_VERSION}"
+echo "Opnecv version ${OPENCV_VERSION}"
 
 SCRIPT=$(readlink -f $0)
 WD=`dirname $SCRIPT`
@@ -46,7 +46,7 @@ if [ ! -d "${WD}/opencv" ]; then
     git clone https://github.com/opencv/opencv.git
 fi
 cd opencv
-git checkout -b ${OPENCV_VERSION} ${OPENCV_VERSION}
+git checkout -b "${OPENCV_VERSION}" "${OPENCV_VERSION}"
 
 cd "${WD}"
 if [ ! -d "${WD}/opencv_contrib" ]; then
@@ -54,6 +54,6 @@ if [ ! -d "${WD}/opencv_contrib" ]; then
     git clone https://github.com/opencv/opencv_contrib.git
 fi
 cd opencv_contrib
-git checkout -b ${OPENCV_VERSION} ${OPENCV_VERSION}
+git checkout -b "${OPENCV_VERSION}" "${OPENCV_VERSION}"
 
 cd "${WD}"
