@@ -24,6 +24,8 @@ Build it
 $ ./build-android-opencv.sh
 ```
 
+The final library will be located in android_lib folder
+
 ### Liecnese
 Copyright (c) 2016 Tzutalin
 Create by TzuTaLin <tzu.ta.lin@gmail.com>
