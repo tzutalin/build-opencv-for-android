@@ -1,4 +1,4 @@
-# Build-opencv-for-android
+# Build-opencv-for-android (Depreciated)
 
 An interactive script to download and build opencv and opencv_contrib for android
 
