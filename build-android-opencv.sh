@@ -3,7 +3,7 @@ NDK_ROOT="${1:-${NDK_ROOT}}"
 
 ### ABIs setup
 #declare -a ANDROID_ABI_LIST=("x86" "x86_64" "armeabi-v7a with NEON" "arm64-v8a")
-declare -a ANDROID_ABI_LIST=("x86" "x86_64" "armeabi")
+declare -a ANDROID_ABI_LIST=("x86" "x86_64" "armeabi" "arm64-v8a" "armeabi-v7a" "mips" "mips64")
 
 ### path setup
 SCRIPT=$(readlink -f $0)
